@@ -9,7 +9,7 @@ AudioVisualizer/[Bb]uild/
 AudioVisualizer/[Bb]uilds/
 AudioVisualizer/[Ll]ogs/
 AudioVisualizer/[Mm]emoryCaptures/
-AudioVisualizer/Assets/[Ss]ongs/
+AudioVisualizer/Assets/Resources/[Ss]ongs/
 AudioVisualizer/Assets/TextMesh Pro/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored

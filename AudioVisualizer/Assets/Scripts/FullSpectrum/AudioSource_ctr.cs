@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class AudioSource_ctr : MonoBehaviour
 {
-    public AudioClip[] clips;
+    public Object[] clips;
     public AudioSource _audioSource;
     public TMP_Dropdown songList;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        clips = Resources.LoadAll("Songs", typeof(AudioClip));
+
         if (clips.Length > 0)
         {
-            _audioSource.clip = clips[0];
+            _audioSource.clip = (AudioClip)clips[0];
             _audioSource.Play();
             songList.ClearOptions();
             List<string> options = new List<string>();
@@ -29,7 +32,7 @@ public class AudioSource_ctr : MonoBehaviour
     public void ChangeTrack()
     {
         _audioSource.Stop();
-        _audioSource.clip = clips[songList.value];
+        _audioSource.clip = (AudioClip)clips[songList.value];
         _audioSource.Play();
     }
 }
